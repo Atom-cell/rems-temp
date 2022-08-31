@@ -1,0 +1,133 @@
+.navbar {
+  background-color: #1890ff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  color: black;
+}
+
+.menu-bars:hover {
+  color: rgba(130, 72, 222, 255);
+}
+
+.nav-menu {
+  /* background-color: #060b26; */
+  background-color: #1890ff;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+  z-index: 10;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 15px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  /* color: #f5f5f5; */
+  color: black;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  /* background-color: #1a83ff; */
+  background-color: rgba(130, 72, 222, 255);
+  /* border-left: 3px solid transparent; */
+  cursor: pointer;
+}
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  /* background-color: #060b26; */
+  /* background-color: #f2e6fb; */
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+/* span {
+  margin-left: 16px;
+} */
+
+.activeLink {
+  background-color: #1a83ff;
+  /* background-color: rgba(130,72,222,255); */
+}
+.sub-nav {
+  padding: 8px 15px 8px 25px;
+}
+.sub-nav a {
+  font-size: 15px;
+}
+.con {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin: 5px;
+  background-color: gray;
+}
+
+/* //////////////////////// */
+.dp_toggle::after {
+  display: none !important;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8fb;
+}
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.ul .item {
+  color: rgb(103, 103, 103);
+  margin: 1em 1.5em;
+  margin-bottom: -0.2em;
+}
+.ul li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #0c53b7;
+  transition: all 2ms;
+}
+#active {
+  border-bottom: 2px solid #0c53b7;
+}
