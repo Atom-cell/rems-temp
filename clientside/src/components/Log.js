@@ -49,11 +49,14 @@ function Log() {
   };
 
   const deleteLogData = async () => {
-    await axios
-      .delete(`http://localhost:5000/admin/deletelog/${name}`)
-      .then((response) => {
-        console.log("RESPONSE", response.data.data);
-      });
+    if (name) {
+      await axios
+        .delete(`http://localhost:5000/admin/deletelog/${name}`)
+        .then((response) => {
+          console.log("RESPONSE", response.data.data);
+        });
+    } else {
+    }
 
     getLogData();
   };
@@ -102,13 +105,11 @@ function Log() {
           CLEAR
         </Button>
         <h2 style={{ position: "relative", left: "1rem" }}>
-          {username}'s Activity Logs
+          {username ? `${username}'s Activity Logs` : null}
         </h2>
       </div>
       {loading === 0 ? (
-        <div className="spinner">
-          <Spinner animation="border" />
-        </div>
+        <div className="spinner">{/* <Spinner animation="border" /> */}</div>
       ) : loading === 1 ? (
         <Table hover bordered className="table">
           <thead>
