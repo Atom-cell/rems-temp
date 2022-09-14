@@ -5,7 +5,7 @@ const server = http.createServer(app);
 const cors = require("cors");
 // import mongoose
 const mongoose = require("mongoose");
-var bodyParser = require("body-parser");
+// var bodyParser = require("body-parser");
 const io = require("socket.io")(server, {
   cors: {
     origin: "http://localhost:3000",
@@ -31,7 +31,7 @@ mongoose.connect(mongoDB, (err) => {
 
 app.use(cors());
 // parse application/json
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 // all routers
 var myCalendarRouter = require("./routes/myCalendar");

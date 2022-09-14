@@ -25,7 +25,7 @@ function Online() {
     // }}
     >
       <Badge pill bg="success">
-        Success
+        Online
       </Badge>{" "}
     </p>
   );
@@ -35,7 +35,7 @@ function Offline() {
   return (
     <p>
       <Badge pill bg="danger">
-        Danger
+        Offline
       </Badge>{" "}
     </p>
   );

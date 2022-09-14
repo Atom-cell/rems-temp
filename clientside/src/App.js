@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { ProjectNameContext } from "./Helper/Context";
 import { CssBaseline } from "@mui/material";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoutes from "./ProtectedRoutes";
 import VideoCall from "./Meetings/VideoCall";
 import MyCalendar from "./Calendar/MyCalendar";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard/Dashboard";
 import EmployeeDashboard from "./Dashboard/EmployeeDashboard";
 import SetMeeting from "./Meetings/SetMeeting";
@@ -30,6 +31,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import io from "socket.io-client";
 
 import AllProjects from "./Projects/AllProjects";
+
 const socket = io.connect("http://localhost:8900");
 
 const App = () => {
@@ -103,7 +105,7 @@ const App = () => {
         ) : (
           <Route exact path="/" element={<LandPage />} />
         )}
-        {/* <Route exact path="/" element={<LandPage />} /> */}
+        <Route exact path="/" element={<LandPage />} />
         <Route path="/home" element={<LandPage />} />
         <Route path="/features" element={<MoreFeatures />} />
         <Route path="/download" element={<Download />} />

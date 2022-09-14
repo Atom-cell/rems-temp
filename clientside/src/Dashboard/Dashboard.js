@@ -19,7 +19,7 @@ const Dashboard = () => {
   //     navigate("/");
   //   }
   // }, []);
-  
+
   return (
     <div className="home">
       <FeaturedInfo />

@@ -7,6 +7,7 @@ import { Container, Button } from "react-bootstrap";
 
 function NavigationBar() {
   const navigate = useNavigate();
+  const [active, setActive] = React.useState(false);
   return (
     <Navbar
       expand="sm"
@@ -22,18 +23,22 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/" className="one" style={{ color: "white" }}>
+            <Nav.Link
+              className="one"
+              style={{ color: "white" }}
+              onClick={() => navigate("/")}
+            >
               Home
             </Nav.Link>
             <Nav.Link
-              href="/features"
               className="two"
               style={{ color: "white" }}
+              onClick={() => navigate("/features")}
             >
               Features
             </Nav.Link>
             <Nav.Link
-              href="/download"
+              onClick={() => navigate("/download")}
               className="three"
               style={{ color: "white" }}
             >
@@ -42,7 +47,7 @@ function NavigationBar() {
 
             {window.screen.width > 768 ? (
               <Nav.Link
-                href="/login"
+                onClick={() => navigate("/login")}
                 className="four"
                 style={{ color: "white" }}
               >
